@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --orange-clr: #E96C28;
+    --white-clr: #fff;
+    --black-clr: #000;
+    --gray-clr: #636363;
+    --light-gray: #C4C4C4;
+    --dawn-pink: #FAE7E5;
+    --frosted-mint: #DCFEF9;
+}
+
+.logo-txt{
+    font-size: 1.5rem;
+    color: var(--orange-clr);   
+    font-weight: bold;    
+}
+
+span{
+    color: var(--black-clr);
+}
+
+a{
+    text-decoration: none;
+}
+
+.navlist{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+li{
+    list-style: none;
+}
+
+.navlinks{
+    color: var(--black-clr);
+    font-weight: 500;
+}
+
+.active,
+.navlinks:hover{
+    color: var(--orange-clr);
+}
+
+.icons-link{
+    background-color: var(--orange-clr);
+    width: 2.3rem;
+    aspect-ratio: 1;    
+    border-radius: 50%;
+    margin-right: .5rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 2.3rem;
+    transition: .3s ease-in-out;
+}
+
+.icons-link:hover{
+    transform: translateY(-10%);
+}
+.fa-solid{
+    font-size: 1.1rem;
+    color: var(--white-clr);
+}
+
+header{   
+    height: 13vh;
+}
+
+nav{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    height: 100%;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.barger{
+    background-color: var(--black-clr);
+    width: 2.3rem;
+    height: .25rem;
+    margin: .3rem;
+    border-radius: 2rem;
+}
+
+    /* section part */
+
+    /* Hero section */
+
+.hero-section{
+    height: calc(100vh - 13vh);   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content{    
+    flex: 1;
+}
+
+.image-container{    
+    flex: 1;
+    position: relative;
+}
+
+.image-container::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    right: 0;
+    background-color: var(--dawn-pink);
+    height: 30vh;
+    width: 35rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.watch{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+h1{
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 1rem;
+}
+
+p{
+    color: var(--gray-clr);
+    /* top se aur bottom se margin ke liye margin- block property ka use krte hai */
+    margin-block: 1.5rem;
+    max-width: 500px;
+}
+
+.btn-container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+button,.form-btn{
+    background-color: var(--orange-clr);
+    color: var(--white-clr);
+    border: .1rem solid var(--orange-clr);
+    padding: .5rem 1.55rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+}
+
+[data-type='bordered-btn']{
+    background: transparent;
+    color: var(--orange-clr);
+}
+
+/* Store Section */
+
+.other-section{
+    /* top aur botton padding property */
+    padding-block: 5rem;
+}
+
+.row-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.column-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+[data-type='centered-txt']{
+    text-align: center;
+    margin-block: .5rem;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;;
+}
+
+.card{
+    background-color: transparent;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0,0.16);
+    width: 15rem;
+    text-align: center;   
+    border-radius: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+[data-type ='categary']{
+     padding-block: 2.5rem;
+}
+.img1{
+    height: 5rem;
+    width: 5rem;
+}
+
+.card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25)
+    0px 13px 27px -5px;
+}
+
+/* Featured food */
+
+h4{
+    font-width: 600;
+}
+
+[data-type='item']{
+    padding-bottom: 1.3rem;
+    overflow: hidden;
+}
+
+.image-part{
+    width: 100%;
+    height: 23vh;
+}
+
+.image-part img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.detail{
+    margin-top: 1rem;
+}
+
+/* App section  */
+
+.app-img{
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    height: 4rem;
+}
+
+/* Best food section  */
+
+.rating{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.rating h4{
+    color: var(--orange-clr);
+    font-size: 1.3rem;
+}
+.rating img{
+    width: 6rem;
+    margin-left: 1rem;
+}
+
+/* Newslatter section */
+.form-container{
+    margin-top: 1.2rem;
+    border: .02rem solid var(--light-gray);
+    height: 3.5rem;
+    border-radius: 5rem;
+    padding: .25rem;
+}
+
+input[type="email"]{
+    height: 100%;
+    border-radius: 5rem 0 0 5rem;
+    border: none;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+input:focus{
+    outline: none;
+}
